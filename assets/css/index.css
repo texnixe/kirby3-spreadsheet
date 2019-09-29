@@ -1,0 +1,21 @@
+.kirby-spreadsheet {
+  border: 1px solid #efefef;
+  border-radius: 1px;
+  border-spacing: 0;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.kirby-spreadsheet tr:nth-child(odd) td {
+  background: #efefef;
+}
+.kirby-spreadsheet td,
+.kirby-spreadsheet th {
+  border-bottom: 1px solid #efefef;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: .5rem .75rem;
+  text-align: left;
+  vertical-align: top;
+}
