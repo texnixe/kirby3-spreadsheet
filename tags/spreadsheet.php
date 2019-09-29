@@ -3,26 +3,25 @@
 namespace texnixe\Spreadsheet;
 
 return [
-  'attr' => [
-      'header',
-      'class',
-      'sheet'
-  ],
-  'html' => function($tag) {
+    'attr' => [
+        'header',
+        'class',
+        'sheet',
+    ],
+    'html' => static function($tag) {
 
-      $html   = '';
-      $file   = $tag->file($tag->value());
+        $file   = $tag->file($tag->value());
 
-      if (!$file) return $html;
+        if (! $file) {
+            return '';
+        }
 
-      $options = [
-        'class'  => $tag->class ?? option('texnixe.spreadsheet.tableClass', 'kirby-spreadsheet'),
-        'header' => $tag->header === 'false' ? false : option('texnixe.spreadsheet.header', true),
-        'sheet'  => $tag->sheet ?? false
-      ];
+        $options = [
+            'class'  => $tag->class ?? option('texnixe.spreadsheet.tableClass', 'kirby-spreadsheet'),
+            'header' => $tag->header === 'false' ? false : option('texnixe.spreadsheet.header', true),
+            'sheet'  => $tag->sheet ?? false,
+        ];
 
-      $html = \texnixe\Spreadsheet\SpreadsheetLoader::getData($file, $options);
-
-      return $html;
-  }
+        return \texnixe\Spreadsheet\HtmlGenerator::getHtml($file, $options);
+    },
 ];

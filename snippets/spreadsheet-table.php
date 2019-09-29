@@ -1,18 +1,18 @@
-<table class="<?= $class ?>">
+<table class="<?php echo $class ?>">
     <?php if ($tableHead): ?>
         <thead>
         <?php  foreach ($tableHead as $headCell): ?>
-              <th><?= $headCell ?></th>
+              <th><?php echo $headCell ?></th>
         <?php endforeach ?>
         </thead>
     <?php endif ?>
     <tbody>
       <?php while ($row = $reader->next()): ?>
       <tr>
-          <?php foreach ($row as $key => $cell): ?>
-              <td><?= $cell ?></td>
+          <?php foreach ($row as $cell): ?>
+              <td><?php echo $cell ?></td>
           <?php endforeach ?>
-      </tr> 
+      </tr>
       <?php endwhile ?>
     </tbody>
 </table>

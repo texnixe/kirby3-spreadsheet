@@ -1,0 +1,18 @@
+[29-Sep-2019 17:08:04 UTC] PHP Parse error:  syntax error, unexpected 'try' (T_TRY) in classes/SpreadsheetLoader.php on line 88
+[29-Sep-2019 18:12:09 UTC] PHP Fatal error:  Default value for parameters with a class type can only be NULL in classes/SpreadsheetLoader.php on line 44
+[29-Sep-2019 18:17:29 UTC] PHP Fatal error:  Default value for parameters with a class type can only be NULL in classes/SpreadsheetLoader.php on line 44
+[29-Sep-2019 18:19:07 UTC] PHP Fatal error:  Default value for parameters with a class type can only be NULL in classes/SpreadsheetLoader.php on line 44
+[29-Sep-2019 18:25:42 UTC] PHP Fatal error:  Default value for parameters with a class type can only be NULL in classes/SpreadsheetLoader.php on line 44
+[29-Sep-2019 18:49:31 UTC] PHP Parse error:  syntax error, unexpected '*', expecting function (T_FUNCTION) or const (T_CONST) in classes/SpreadsheetLoader.php on line 95
+[29-Sep-2019 19:53:55 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 19:53:55 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 53
+[29-Sep-2019 19:55:43 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 19:55:43 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 52
+[29-Sep-2019 20:10:29 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 20:10:29 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 52
+[29-Sep-2019 20:11:37 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 20:11:37 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 54
+[29-Sep-2019 20:13:58 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 20:13:58 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 55
+[29-Sep-2019 20:18:27 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ']' in index.php on line 29
+[29-Sep-2019 20:18:27 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ';' in classes/PageGenerator.php on line 55
