@@ -14,21 +14,27 @@ final class PageGenerator
     {
         $options   = array_merge(option('texnixe.spreadsheet.pageGeneratorDefaults'), $options);
         $reader    = SpreadsheetLoader::getReader($file, $options);
-        $tableHead = SpreadsheetLoader::getTableHead($reader, $options['header']);
-        $parentPage = kirby()->page($options['parentPage']);
 
-        if (! $parentPage) {
-            throw new Exception('Error: The parent page does not exist.');
-            return null;
+        if ($reader === false) {
+            return '';
+        } else {
+
+            $tableHead = SpreadsheetLoader::getTableHead($reader, $options['header']);
+            $parentPage = kirby()->page($options['parentPage']);
+
+            if (! $parentPage) {
+                throw new Exception('Error: The parent page does not exist.');
+                return null;
+            }
+            while ($row = $reader->next()) {
+                $data = array_combine($tableHead, (array) $row);
+                $log = static::createChildren($parentPage, $options, $data);
+            }
+            if (count($log) === 0) {
+                return true;
+            }
+            return;
         }
-        while ($row = $reader->next()) {
-            $data = array_combine($tableHead, (array) $row);
-            $log = static::createChildren($parentPage, $options, $data);
-        }
-        if (count($log) === 0) {
-            return true;
-        }
-        return;
     }
 
     public static function createChildren($parentPage, $options, $data)

@@ -10,7 +10,7 @@
       <?php while ($row = $reader->next()): ?>
       <tr>
           <?php foreach ($row as $cell): ?>
-              <td><?php echo $cell ?></td>
+              <td><?php echo html($cell) ?></td>
           <?php endforeach ?>
       </tr>
       <?php endwhile ?>

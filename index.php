@@ -3,7 +3,7 @@
 @include_once __DIR__ . '/vendor/autoload.php';
 
 load([
-    'texnixe\\Spreadsheet\\SpreadsheetLoader' => 'classes/SpreadSheetLoader.php',
+    'texnixe\\Spreadsheet\\SpreadsheetLoader' => 'classes/SpreadsheetLoader.php',
     'texnixe\\Spreadsheet\\CacheHandler'      => 'classes/CacheHandler.php',
     'texnixe\\Spreadsheet\\HtmlGenerator'      => 'classes/HtmlGenerator.php',
     //'texnixe\\Spreadsheet\\PageGenerator'      => 'classes/PageGenerator.php',
