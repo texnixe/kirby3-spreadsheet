@@ -20,19 +20,25 @@ final class HtmlGenerator
         }
 
         $reader    = SpreadsheetLoader::getReader($file, $options);
-        $tableHead = SpreadsheetLoader::getTableHead($reader, $options['header']);
-        $html      = snippet('spreadsheet-table', ['reader' => $reader, 'tableHead' => $tableHead, 'class' => $options['class']], true);
-
-        if ($cache === true) {
-            CacheHandler::cache()->set(
-                md5($file . json_encode($options)),
-                $html,
-                option('texnixe.spreadsheet.expires')
-            );
+        if ($reader === false) {
+            return 'The file "' . $file->filename() . '" is not valid';
         } else {
-            CacheHandler::cache()->flush();
-        }
+            $tableHead = SpreadsheetLoader::getTableHead($reader, $options['header']);
 
-        return $html;
+            $html      = snippet('spreadsheet-table', ['reader' => $reader, 'tableHead' => $tableHead, 'class' => $options['class']], true);
+
+            if ($cache === true) {
+                CacheHandler::cache()->set(
+                    md5($file . json_encode($options)),
+                    $html,
+                    option('texnixe.spreadsheet.expires')
+                );
+            } else {
+                CacheHandler::cache()->flush();
+            }
+
+            return $html;
+        }
     }
+
 }
